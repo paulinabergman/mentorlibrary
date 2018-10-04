@@ -9,9 +9,9 @@
     <div class="header"<h2><font face="verdana" style="bold">Welcome to the Mentor Library</font></h2></div>
     <h5><font face="verdana">The idea of creating the Mentor Library online came to me in a Instagram post.<br>
       To be able to "borrow" a person who has stories to tell you, from their unique<br>
-      life experiences sounded like something I myself would love as a service!</h5></font>
-    <div class="soksection">
+      life experiences sounded like something I myself would love as a service!</h5></font><br>
       <img src="http://africanleadership.co.uk/wp-content/uploads/2017/02/Mentors-Image_2.jpg" width="400">
+    <div class="soksection">
       <div class="input">
         <input placeholder="Add"></input>
       </div>
@@ -32,6 +32,19 @@ $(function() {
     $('.input').append('<input></input>')
   }
   $('.addbutton').click(add_option)
+
+  var options=[]
+  var submit = function(){
+    $('.soksection').hide()
+    $('.resultsection').css('display', 'flex')
+    $('input').each(function(){
+      options.push($(this).val())
+    })
+    var winner = options[Math.floor(Math.random() * options.length)]
+    console.log(winner)
+    $('.resultsection').text(winner)
+  }
+  $('.sokknapp').click(submit)
   })
 </script>
   </body>

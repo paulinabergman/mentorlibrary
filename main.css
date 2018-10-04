@@ -25,6 +25,9 @@ h5{
 
 .resultsection{
   margin: 10px 0px 10px 0px;
+  justify-content: center;
+  display: flex;
+  font-size: 72px;
   width: 400px;
 }
 .input {
